@@ -99,10 +99,7 @@ class FileListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        // Scroll to hide search bar
-        self.tableView.contentOffset = CGPoint(x: 0, y: searchController.searchBar.frame.size.height)
-        
+                
         // Make sure navigation bar is visible
         self.navigationController?.isNavigationBarHidden = false
     }
