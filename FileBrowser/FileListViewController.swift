@@ -28,7 +28,11 @@ class FileListViewController: UIViewController {
     let searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.searchBarStyle = .minimal
-        searchController.searchBar.backgroundColor = UIColor.white
+        if #available(iOS 13.0, *) {
+            searchController.searchBar.backgroundColor = UIColor.systemBackground
+        } else {
+            searchController.searchBar.backgroundColor = UIColor.white
+        }
         searchController.dimsBackgroundDuringPresentation = false
         return searchController
     }()
