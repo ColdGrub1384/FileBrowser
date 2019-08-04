@@ -29,9 +29,9 @@ class FileListViewController: UIViewController {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.searchBarStyle = .minimal
         if #available(iOS 13.0, *) {
-            searchController.searchBar.backgroundColor = UIColor.systemBackground
+            searchController.searchBar.backgroundColor = .systemBackground
         } else {
-            searchController.searchBar.backgroundColor = UIColor.white
+            searchController.searchBar.backgroundColor = .white
         }
         searchController.dimsBackgroundDuringPresentation = false
         return searchController
@@ -86,7 +86,12 @@ class FileListViewController: UIViewController {
         prepareData()
         
         // Set search bar
-        tableView.tableHeaderView = searchController.searchBar
+        //tableView.tableHeaderView = searchController.searchBar
+        
+        // Set background color
+        if #available(iOS 13.0, *) {
+            tableView.backgroundColor = .systemBackground
+        }
         
         // Register for 3D touch
         self.registerFor3DTouch()

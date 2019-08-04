@@ -27,7 +27,6 @@
                     </connections>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="DSW-B9-8cg" secondAttribute="bottom" id="D1e-43-tqH"/>
                 <constraint firstItem="DSW-B9-8cg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="mNB-8b-mrx"/>
